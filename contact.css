@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  height: 40px;
+  margin-right: 8px;
+}
+.logo span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0047ab;
+}
+
+
+
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 50px auto;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form {
+  padding: 30px;
+}
+
+.contact-form h2 {
+  color: #333;
+  margin-bottom: 10px;
+  border-bottom: 2px solid orange;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.contact-form p {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.form-row input {
+  flex: 1;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.captcha-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.captcha-box {
+  background: orange;
+  color: white;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 4px;
+}
+
+.refresh-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.submit-btn {
+  background: #0077cc;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+
+.submit-btn:hover {
+  background: #005fa3;
+}
+
+.contact-info {
+  background: #204b74;
+  color: #fff;
+  padding: 30px;
+}
+
+.contact-info h3 {
+  margin-bottom: 20px;
+  border-bottom: 2px solid orange;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.contact-info p {
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.contact-info strong {
+  color: orange;
+}
+
+
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+
+
+  nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  nav.active {
+    display: flex;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+}
+
